@@ -6,11 +6,11 @@ export default defineConfig({
   user: "postgres",
   password: "postgres",
   debug: true,
-  entitiesTs: ["./src/entities/*.ts"],
+  // entitiesTs: ["./src/entities/*.ts"],
   entities: ["./build/entities/*.js"],
   dbName: "mikrorepro",
   migrations: {
     path: "build/migrations",
-    pathTs: "src/migrations",
+    // pathTs: "src/migrations",
   },
 });

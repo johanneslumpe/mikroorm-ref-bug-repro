@@ -8,6 +8,7 @@
     "strict": true,
     "isolatedModules": true,
     "composite": true,
+    "useDefineForClassFields": false,
     "allowSyntheticDefaultImports": false,
     "forceConsistentCasingInFileNames": true,
     "module": "CommonJS",

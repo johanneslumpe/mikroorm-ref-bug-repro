@@ -5,21 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc",
+    "build": "rm -rf ./build && tsc",
     "database:migrate": "npx --no mikro-orm migration:up",
     "clear-database": "node build/clear-database.js",
     "create-user": "node build/create-user.js",
     "showcase-bug": "MIKRO_ORM_LOG_EM_ID=true node build/index.js",
-    "showcase-workaround": "MIKRO_ORM_LOG_EM_ID=true node build/workaround.js"
+    "showcase-workaround": "MIKRO_ORM_LOG_EM_ID=true node build/workaround.js",
+    "showcase-sqlite-vs-postgres": "MIKRO_ORM_LOG_EM_ID=true node build/sqlite-vs-postgres.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@mikro-orm/cli": "^5.7.12",
-    "@mikro-orm/core": "^5.7.12",
-    "@mikro-orm/migrations": "^5.7.12",
-    "@mikro-orm/postgresql": "^5.7.12",
+    "@mikro-orm/cli": "5.7.12",
+    "@mikro-orm/core": "5.7.12",
+    "@mikro-orm/migrations": "5.7.12",
+    "@mikro-orm/postgresql": "5.7.12",
+    "@mikro-orm/sqlite": "5.7.12",
     "@types/node": "^20.4.9",
+    "reflect-metadata": "^0.1.13",
     "typescript": "^5.1.6",
     "uuid": "^9.0.0"
   },
