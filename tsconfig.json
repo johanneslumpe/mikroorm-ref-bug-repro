@@ -1,21 +1,19 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "esnext",
-    "sourceMap": true,
-    "moduleResolution": "Node",
-    "skipLibCheck": true,
+    "module": "Node16",
+    "target": "es2020",
+    "lib": ["es2020"],
+    "moduleResolution": "Node16",
+    "declaration": true,
     "strict": true,
-    "isolatedModules": true,
-    "composite": true,
-    "useDefineForClassFields": false,
-    "allowSyntheticDefaultImports": false,
-    "forceConsistentCasingInFileNames": true,
-    "module": "CommonJS",
-    "outDir": "build",
-    "rootDir": "./src",
+    "suppressImplicitAnyIndexErrors": true,
+    "esModuleInterop": true,
+    "preserveConstEnums": true,
+    "ignoreDeprecations": "5.0",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "esModuleInterop": true
+    "sourceMap": true,
+    "outDir": "build",
+    "rootDir": "./src"
   }
 }
