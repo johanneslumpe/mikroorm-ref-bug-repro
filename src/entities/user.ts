@@ -1,4 +1,4 @@
-import { Entity, OneToOne, Property, Ref } from "@mikro-orm/core";
+import { Entity, OneToMany, Collection, Property } from "@mikro-orm/core";
 
 import { BaseEntity } from "./base-entity";
 import { UserProfile } from "./user-profile";
@@ -14,10 +14,6 @@ export class User extends BaseEntity<"version"> {
   @Property({ version: true })
   version!: number;
 
-  @OneToOne(() => UserProfile, {
-    inversedBy: "user",
-    ref: true,
-    nullable: true,
-  })
-  userProfile?: Ref<UserProfile>;
+  @OneToMany(() => UserProfile, (x) => x.user)
+  userProfiles = new Collection<UserProfile>(this);
 }
